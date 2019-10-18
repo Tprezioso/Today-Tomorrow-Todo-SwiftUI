@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F1EE2FD235A5640006BAF09 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1EE2FC235A5640006BAF09 /* Task.swift */; };
 		9F33C8CF2357D80C0045B209 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33C8CE2357D80C0045B209 /* AppDelegate.swift */; };
 		9F33C8D12357D80C0045B209 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33C8D02357D80C0045B209 /* SceneDelegate.swift */; };
 		9F33C8D32357D80C0045B209 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33C8D22357D80C0045B209 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F1EE2FC235A5640006BAF09 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		9F33C8CB2357D80C0045B209 /* TodayTomorrowTodoSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayTomorrowTodoSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F33C8CE2357D80C0045B209 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F33C8D02357D80C0045B209 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F1EE2FA235A551C006BAF09 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				9F33C8CE2357D80C0045B209 /* AppDelegate.swift */,
+				9F33C8D02357D80C0045B209 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		9F1EE2FB235A552E006BAF09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F33C8D22357D80C0045B209 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F1EE2FE235A5647006BAF09 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				9F1EE2FC235A5640006BAF09 /* Task.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
 		9F33C8C22357D80C0045B209 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +83,9 @@
 		9F33C8CD2357D80C0045B209 /* TodayTomorrowTodoSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				9F33C8CE2357D80C0045B209 /* AppDelegate.swift */,
-				9F33C8D02357D80C0045B209 /* SceneDelegate.swift */,
-				9F33C8D22357D80C0045B209 /* ContentView.swift */,
+				9F1EE2FA235A551C006BAF09 /* Delegates */,
+				9F1EE2FE235A5647006BAF09 /* Modal */,
+				9F1EE2FB235A552E006BAF09 /* View */,
 				9F33C8D42357D80D0045B209 /* Assets.xcassets */,
 				9F33C8D92357D80D0045B209 /* LaunchScreen.storyboard */,
 				9F33C8DC2357D80D0045B209 /* Info.plist */,
@@ -146,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F1EE2FD235A5640006BAF09 /* Task.swift in Sources */,
 				9F33C8CF2357D80C0045B209 /* AppDelegate.swift in Sources */,
 				9F33C8D12357D80C0045B209 /* SceneDelegate.swift in Sources */,
 				9F33C8D32357D80C0045B209 /* ContentView.swift in Sources */,
