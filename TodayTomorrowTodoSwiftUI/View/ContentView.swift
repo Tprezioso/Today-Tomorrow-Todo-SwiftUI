@@ -20,9 +20,13 @@ struct ContentView: View {
                 Section(header: Text("Whats Next?")) {
                     HStack {
                         TextField("New Item", text: self.$newToDoItem)
+                        
+                            
                         Button(action: {
                             let todoItem = Task(title: self.newToDoItem, isDone: false)
                             self.arrayList.append(todoItem)
+                            self.newToDoItem = ""
+                            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
                         }){
                             Image(systemName: "plus.circle.fill")
                                 .foregroundColor(.green)
