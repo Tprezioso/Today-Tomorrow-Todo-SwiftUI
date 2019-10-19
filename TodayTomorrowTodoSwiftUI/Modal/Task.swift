@@ -12,6 +12,7 @@ struct Task: Equatable, Hashable, Codable, Identifiable {
     let id: UUID
     var title: String
     var isDone: Bool
+    var pinned: Bool
     var createdAt: Date
     
     init(title: String, isDone: Bool) {
@@ -19,5 +20,6 @@ struct Task: Equatable, Hashable, Codable, Identifiable {
         self.title = title
         self.isDone = isDone
         self.createdAt = Date()
+        self.pinned = false
     }
 }
