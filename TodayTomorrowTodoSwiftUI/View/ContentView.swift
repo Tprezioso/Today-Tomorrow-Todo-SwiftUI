@@ -20,9 +20,11 @@ struct ContentView: View {
                     HStack {
                         TextField("New Item", text: self.$newToDoItem)
                         Button(action: {
-                            let todoItem = Task(title: self.newToDoItem, isDone: false)
-                            self.arrayList.append(todoItem)
-                            self.newToDoItem = ""
+                            if !self.newToDoItem.isEmpty {
+                                let todoItem = Task(title: self.newToDoItem, isDone: false)
+                                self.arrayList.append(todoItem)
+                                self.newToDoItem = ""
+                            }
                             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                         }) {
                             Image(systemName: "plus.circle.fill")
@@ -49,5 +51,11 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+extension StringProtocol where Index == String.Index {
+    var isEmptyField: Bool {
+        return trimmingCharacters(in: .whitespaces) == ""
     }
 }
